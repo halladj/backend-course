@@ -1,0 +1,19 @@
+{
+  "name": "node_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/session-3/index.js"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "expressjs": "^1.0.1",
+    "install": "^0.13.0",
+    "npm": "^11.2.0",
+    "readline-sync": "^1.4.10"
+  }
+}

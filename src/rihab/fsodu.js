@@ -10,19 +10,28 @@ try{
     //await fsPromisses.access(FILE_NAME)
     //console.log("the file existe")
     
-    fs.mkdir("folder",(err)=>{
+    //fs.mkdir("folder",(err)=>{
         //if (err){
             //return console.error(err)
         //}
         //console.log("folder created succeful")
     //})
-    fs.rm("folder",{recursive: true},(err)=>{
-        if (err){
-         return console.error(err)
-        }
-        console.log("folder deleted succeful")
-    })
-    })
+    //fs.rm("folder",{recursive: true},(err)=>{
+        //if (err){
+         //return console.error(err)
+        //}
+        //console.log("folder deleted succeful")
+    //})
+    //const data= await fsPromisses.readFile(FILE_NAME , "utf-8")
+    //console.log("result: ",data)
+    //const UpperCaseData = data.toUpperCase()
+    //console.log("data: "+UpperCaseData+"type" +typeof(UpperCaseData))
+    //await fsPromisses.writeFile( FILE_NAME , UpperCaseData)
+    //console.log("success")
+    
+    
+    
+    
 }catch(err){
     console.error("error"+ err);
 }

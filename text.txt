@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-
-=======
-lowercase text, please make me uppercase.
->>>>>>> e5a28b72656551460fd13934282184007eb4f453

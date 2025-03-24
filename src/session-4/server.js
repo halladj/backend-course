@@ -14,8 +14,18 @@ const server = http.createServer( (req, res)=>{
             }
             
             if (req.method === "POST"){
-                res.writeHead(201);
-                res.end("Home Page post")
+                let body = ""
+
+                req.on('data', (chunk) => {
+                    body = chunk.toString()
+                })
+
+                req.on("end", () => {
+                    console.log(body)
+                    res.writeHead(201);
+                    res.end(JSON.stringify(body,null,2))
+                })
+
             }
             break;
         case "/about":

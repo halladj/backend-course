@@ -11,9 +11,9 @@ const server = http.createServer( (req, res)=>{
     res.setHeader('Content-Type', 'application/json');
 
     let route = req.url;
-    route = route.split("/")
+    route = route.split("/")  // --> /cart/5   --> ['','cart','5']
 
-    if (route[2] != ""){
+    if (route[2] != "" ){
         var id = route[2]
     }
     route = route[1]

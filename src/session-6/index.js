@@ -24,23 +24,21 @@ app.get("/cart", (req, res) => {
 });
 
 app.post("/cart", (req, res) => {
-    if(!req.body.id){
-        res.send("Bad Request: did not include 'id'.")
-    }
-    if(!req.body.name){
-        res.send("Bad Request: did not include 'name'.")
-    }
+    try {
+        const item = cartItemSchema.parse(req.body);
 
-    if(!req.body.quantity){
-        res.send("Bad Request: did not include 'quantity'.")
+        cart.push(item)
+        res.status(201)
+        res.send(item)   
+    } catch (error) {
+        if (error instanceof z.ZodError){
+            res.status(400)
+            res.send({error: error.errors})
+        }else{
+            res.status(500)
+            res.send("Internal Error")
+        }
     }
-    if(!req.body.price){
-        res.send("Bad Request: did not include 'price'.")
-    }
-    const data = req.body;
-    cart.push(data)
-    res.status(201)
-    res.send(data)
 });
 
 app.delete("/cart/:id",(req, res) => {

@@ -12,10 +12,18 @@
   "type": "module",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.1",
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "expressjs": "^1.0.1",
     "install": "^0.13.0",
+    "mongoose": "^8.13.1",
     "npm": "^11.2.0",
+    "react": "^19.1.0",
+    "react-router-dom": "^7.4.1",
+    "react-scripts": "^5.0.1",
     "readline-sync": "^1.4.10",
     "zod": "^3.24.2"
   }

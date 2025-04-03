@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #f4f4f4;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  margin: 0 10px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.book-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.book-card button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.liked-books {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.liked-books .book-card {
+  width: 200px;
+  margin: 10px;
+}

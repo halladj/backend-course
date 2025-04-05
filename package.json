@@ -19,7 +19,7 @@
     "express": "^4.21.2",
     "expressjs": "^1.0.1",
     "install": "^0.13.0",
-    "mongoose": "^8.13.1",
+    "mongoose": "^8.13.2",
     "npm": "^11.2.0",
     "react": "^19.1.0",
     "react-router-dom": "^7.4.1",

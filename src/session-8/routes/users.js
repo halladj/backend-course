@@ -1,3 +1,4 @@
+// import { UserModel } from "../models/User.js";
 import { UserModel } from "../models/User.js";
 
 const GetAllUsers = async (req, res) => {

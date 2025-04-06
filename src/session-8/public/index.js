@@ -7,8 +7,33 @@ const books = [
   {id: 3, title: "HTML and CSS", author: "Mary Johnson", price: "$15", description: "Web development basics"}
 ];
 
+var likedBookscvar =[]
 // Liked books list
-let likedBooks = [];
+const fetchData = async (params) =>{
+  const res = await fetch("http://localhost:3000/book");
+
+  return res
+}
+
+async function fun (){
+try {
+
+  const r = await fetchData()
+  r.json().then((value)=>{
+    value.forEach((item)=>books.push(item))
+  })
+
+  console.log(books)
+
+  renderProducts()
+  
+
+}catch (err){
+  console.log("error"+ err)
+}
+}
+fun ()
+
 
 // Function to render products
 function renderProducts() {
@@ -25,10 +50,10 @@ function renderProducts() {
     bookCard.classList.add('book-card');
     bookCard.innerHTML = `
       <h3>${book.title}</h3>
-      <p>by ${book.author}</p>
+      <p>by ${book.description}</p>
       <p><strong>${book.price}</strong></p>
-      <button onclick="viewDetails(${book.id})">View Details</button>
-      <button onclick="toggleLike(${book.id})">Like</button>
+      <button onclick="viewDetails(${book._id})">View Details</button>
+      <button onclick="toggleLike(${book._id})">Like</button>
     `;
     bookList.appendChild(bookCard);
   });

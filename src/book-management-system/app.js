@@ -2,10 +2,12 @@ import express from"express";
 import mongoose from "mongoose";
 import {GetAllBook,GetBookById,CreateNewBook,UpdateBookById,DeleteBookByID}from "./routes/books.js"
 import { validationMiddleware } from "./middelware/validationMiddleware.js";
+import dotenv from 'dotenv';
+import cors from "cors";
 
+dotenv.config();
 
-
-await mongoose.connect("mongodb+srv://rodyinfo09:rodyinfo09@cluster0.20cbzwf.mongodb.net/")
+await mongoose.connect(process.env.DATABASE_URL)
 console.log("connection created...")
 
 const db = mongoose.connection;
@@ -17,6 +19,8 @@ db.on("open",() =>{
 });
 
 const app = express()
+app.use(cors())
+app.use(express.static('./src/session-8/public'))
 app.use(express.json());
 
 //Get all books
